@@ -12,10 +12,10 @@ class Program
          *  On lui permet de le faire lorsqu'il entre "y". Dans les autres cas, on termine le programme
          */
 
-        string restart = "y";
-        while (restart == "y")
+        string restart;
+        do
         {
-            Console.WriteLine("Donne moi un nombre.");
+            Console.WriteLine("Donne moi un nombre entier.");
             int number = Convert.ToInt32(Console.ReadLine());
             if (number % 2 == 0)
             {
@@ -25,8 +25,8 @@ class Program
             {
                 Console.WriteLine("Ce nombre est impair.");
             }
-            Console.WriteLine("Veux-tu continuer ou sortir? (y si oui)");
+            Console.WriteLine("Veux-tu vérifier un autre nombre ou sortir? (y/n)");
             restart = Console.ReadLine();
-        }
+        } while (restart == "y");
     }
 }
