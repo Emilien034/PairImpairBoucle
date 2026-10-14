@@ -27,6 +27,6 @@ class Program
             }
             Console.WriteLine("Veux-tu vérifier un autre nombre ou sortir? (y/n)");
             restart = Console.ReadLine();
-        } while (restart == "y");
+        } while (restart == "y" || restart == "Y");
     }
 }
